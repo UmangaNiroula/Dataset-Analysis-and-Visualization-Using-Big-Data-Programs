@@ -5,6 +5,7 @@ This project applies machine learning techniques to predict flight delays using 
 ## Predicting Flight Delays using PySpark and Machine Leaning
 
 1.	Introduction
+   
 In this report, we explore the application of machine learning techniques to predict flight delays using PySpark, a powerful framework for distributed data processing. Flight delays pose significant challenges for airlines, airports, and passengers, making predictive models valuable tools for improving operational efficiency and passenger experience. By leveraging historical flight data, we aim to build and evaluate a classification model to determine whether a flight will arrive late (Ball et al., 2024).
 
 The dataset used in this analysis, sourced from Kaggle, includes various features such as the month, day of the month, day of the week, carrier information, flight number, origin airport, flight distance (in miles), scheduled departure time, flight duration, and the actual delay time. The primary objective is to predict the delay status of flights, classifying them as either delayed or on-time (Kaggle, n.d.). Furthermore, we employ a Logistic Regression model within a pipeline that includes several stages for data preprocessing and feature engineering. The pipeline includes transforming categorical features, assembling feature vectors, scaling numeric features, and finally, training the logistic regression model. We also utilize cross-validation to tune hyperparameters and optimize the model. 
@@ -42,26 +43,31 @@ The dataset used in this analysis, sourced from Kaggle, provides comprehensive d
 After evaluating the Decision Tree model, we explore Logistic Regression as an alternative classification algorithm. Logistic Regression is a popular and straightforward method for binary classification problems. It models the probability that a given input point belongs to a certain class by using a logistic function (Hosmer Jr, Sturdivant, & Lemeshow, 2013). This makes it well-suited for our task of predicting flight delays.
 
 •	Model Training
+
 We train the Logistic Regression model on the flights_train dataset. The training code is shown in the following figure.
 
 ![1](https://github.com/user-attachments/assets/04cdd431-26b1-43fb-ac30-193bed3fb6ad)
 
 •	Model Prediction
+
 Once the model is trained, we use it to make predictions on the test dataset (flights_test). The predictions and their evaluation are shown by the following figure.
 
 ![2](https://github.com/user-attachments/assets/4ec7cb06-fe19-439a-9bdc-c6d02101f275)
 
 •	Model Evaluation
+
 The evaluation metrics for the Logistic Regression model are calculated using the precision and recall as shown in the following figure.
 
 ![3](https://github.com/user-attachments/assets/58b5cd14-ca26-4848-b213-57eb32e4fd82)
 
 •	Calculating Confusion Matrix Elements
+
 Following figure shows the calculation of confusion matrix.
 
 ![4](https://github.com/user-attachments/assets/78f9d55d-6397-4dad-a778-852740f6ecd9)
 
 •	Calculating Model Accuracy
+
 The precision and recall values are show on the following figure.
 
 ![5](https://github.com/user-attachments/assets/c0913e6c-e785-40eb-8828-5dbb381fd2a5)
